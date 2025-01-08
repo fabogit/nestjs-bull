@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nestjs-bull
+  name: nestjs-bull
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nestjs-bull
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nestjs-bull
+    spec:
+      containers:
+        - image: nestjs-bull:latest
+          name: nestjs-bull
+          ports:
+            - containerPort: 3000
+          resources: {}
+status: {}
