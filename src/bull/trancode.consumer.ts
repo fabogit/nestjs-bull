@@ -8,8 +8,18 @@ export class TranscodeConsumer {
   private readonly logger = new Logger(TranscodeConsumer.name, {
     timestamp: true,
   });
+
+  private readonly waitTime = (timeout: number) => {
+    return new Promise<void>((resolve) => setTimeout(resolve, timeout));
+  };
+
   @Process()
   async transcode(job: Job<unknown>) {
-    this.logger.debug(job);
+    this.logger.log(`Transcoding message: ${job.id}`);
+    this.logger.debug(job.data);
+
+    // simulate processing delay
+    await this.waitTime(2000);
+    this.logger.log(`Transcoding complete for job: ${job.id}`);
   }
 }

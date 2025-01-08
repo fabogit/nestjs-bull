@@ -10,7 +10,7 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Post()
+  @Post('transcode')
   async transcode() {
     return this.appService.transcode();
   }
