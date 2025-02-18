@@ -1,5 +1,5 @@
 {
-  "author": "",
+  "author": "fabogit",
   "dependencies": {
     "@nestjs/bull": "^10.2.3",
     "@nestjs/common": "^10.4.15",

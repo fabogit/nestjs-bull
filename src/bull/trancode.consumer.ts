@@ -1,7 +1,7 @@
+import { Logger } from '@nestjs/common';
 import { Process, Processor } from '@nestjs/bull';
 import { Job } from 'bull';
 import { TRANSCODE_QUEUE } from './constants';
-import { Logger } from '@nestjs/common';
 
 @Processor(TRANSCODE_QUEUE)
 export class TranscodeConsumer {

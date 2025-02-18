@@ -18,7 +18,12 @@ spec:
         app: nestjs-bull
     spec:
       containers:
-        - image: nestjs-bull:latest
+        - image: fabodhub/nestjs-bull:latest
+          env:
+            - name: REDIS_HOST
+              value: nestjs-bull-redis-master
+            - name: REDIS_PORT
+              value: '6379'
           name: nestjs-bull
           ports:
             - containerPort: 3000
