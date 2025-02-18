@@ -13,7 +13,6 @@ COPY . .
 
 RUN pnpm run build
 
-
 # Production stage
 FROM node:alpine AS production
 

@@ -1,5 +1,6 @@
 ## Build app image from project /
 
+
 ```bash
 docker build -t fabodhub/nestjs-bull:latest .
 ```
@@ -23,6 +24,7 @@ minikube delete --all
 ```
 
 ## Load image and create new deployment
+we build using https://artifacthub.io/packages/helm/bitnami/redis and fabodhub/nestjs-bull
 
 ```bash
 cd ./k8s
